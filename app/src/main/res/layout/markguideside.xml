@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E7E3"
+    tools:context="com.example.footfit.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="413dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="515dp"
+        android:background="#A39165"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/listofimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="40dp"
+            android:text="@string/mark_guideline"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backTocmarks3"
+        android:layout_width="112dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="55dp"
+        android:background="#CCC7C0A7"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout23"
+        android:layout_width="409dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="409dp"
+            android:layout_height="400dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/insidemark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout34"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/backTocmarks3"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout24"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="Arch"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout24"
+        android:layout_width="198dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="156dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout35"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout34"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/arch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:inputType="numberDecimal"
+            android:text="2.5"
+            android:textAlignment="viewEnd"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout35"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="156dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout24"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="cm"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

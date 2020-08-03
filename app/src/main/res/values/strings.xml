@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FootFit</string>
+    <string name="list_of_image">LIST OF IMAGE</string>
+    <string name="mark">MARK</string>
+    <string name="preview">PREVIEW</string>
+    <string name="left_lateral">Left Lateral</string>
+    <string name="left_sole">Left Sole</string>
+    <string name="left_medial">Left Medial</string>
+    <string name="right_lateral">Right Lateral</string>
+    <string name="right_sole">Right Sole</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="right_medial">Right Medial</string>
+    <string name="result">RESULT</string>
+    <string name="done">DONE</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="finish">FINISH</string>
+    <string name="guideline">GUIDELINE</string>
+    <string name="a_friend_to_help">A friend to help</string>
+    <string name="bear_feet_with_pants_roll_up">Bear feet with pants roll up</string>
+    <string name="a_blank_of_a4_paper">A blank of A4 paper</string>
+    <string name="well_light_in_the_room">Well light in the room</string>
+    <string name="todo">TODO</string>
+    <string name="markguid">guideline?</string>
+    <string name="next">NEXT</string>
+    <string name="before_measurement">BEFORE MEASUREMENT</string>
+    <string name="login_with_google">LOGIN WITH GOOGLE</string>
+    <string name="mark_guideline">MARK GUIDELINE</string>
+    <string name="select_the_side_of_your_foot">Select the side of your foot</string>
+    <string name="back">BACK</string>
+    <string name="retake">RETAKE</string>
+    <string name="hello">hello</string>
+    <string name="mark_each_part_of_foot">Mark each part of foot</string>
+    <string name="cm">cm</string>
+    <string name="arch">Arch</string>
+
+</resources>

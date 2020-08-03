@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.footfit.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E7E3"
+        tools:context="com.example.footfit.MainActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="413dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="606dp"
+            android:background="#A39165"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/listofimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#80EADFBA"
+                android:fontFamily="sans-serif-medium"
+                android:paddingTop="40dp"
+                android:text="@string/list_of_image"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="208dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="504dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintVertical_bias="0.333">
+
+
+            <TextView
+                android:id="@+id/sideoffoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/left_sole"
+                android:textColor="#676151"
+                android:textSize="18sp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="504dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout7"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintVertical_bias="0.4">
+
+            <Button
+                android:id="@+id/pv_ls"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="504dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintVertical_bias="0.454">
+
+            <Button
+                android:id="@+id/mk_ls"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/mark"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="208dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="415dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/sideoffoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/right_sole"
+                android:textColor="#676151"
+                android:textSize="18sp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginBottom="415dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout10"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout9"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+            app:layout_constraintVertical_bias="0.0">
+            <Button
+                android:id="@+id/pv_rs"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="415dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout8"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+            app:layout_constraintVertical_bias="0.0">
+            <Button
+                android:id="@+id/mk_rs"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/mark"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="208dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="326dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <TextView
+                android:id="@+id/sideoffoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/left_medial"
+                android:textColor="#676151"
+                android:textSize="18sp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginBottom="326dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout13"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout12"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+            app:layout_constraintVertical_bias="0.333">
+
+            <Button
+                android:id="@+id/pv_lm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="326dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout11"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/mk_lm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/mark"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout14"
+            android:layout_width="208dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="238dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
+
+            <TextView
+                android:id="@+id/sideoffoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/right_medial"
+                android:textColor="#676151"
+                android:textSize="18sp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout15"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginBottom="237dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout18"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout14"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+            <Button
+                android:id="@+id/pv_rm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout18"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="237dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout15"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/mk_rm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/mark"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout16"
+            android:layout_width="208dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="191dp"
+            android:layout_marginBottom="148dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/sideoffoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/left_lateral"
+                android:textColor="#676151"
+                android:textSize="18sp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout17"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="148dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout16"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout15"
+            app:layout_constraintVertical_bias="0.0">
+            <Button
+                android:id="@+id/pv_ll"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout21"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="148dp"
+            android:background="#B3C2B89F"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout17"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout18"
+            app:layout_constraintVertical_bias="1.0">
+            <Button
+                android:id="@+id/mk_ll"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/mark"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout19"
+            android:layout_width="208dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="191dp"
+            android:layout_marginBottom="59dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout16">
+
+            <TextView
+                android:id="@+id/sideoffoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/right_lateral"
+                android:textColor="#676151"
+                android:textSize="18sp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout20"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="58dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout19"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout17">
+            <Button
+                android:id="@+id/pv_rl"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout22"
+            android:layout_width="90dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="59dp"
+            android:background="#80EADFBA"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout20"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout21">
+
+            <Button
+                android:id="@+id/mk_rl"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/box2"
+                android:text="@string/mark"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/GTresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="100dp"
+            android:background="#CCC7C0A7"
+            android:text="@string/confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout22" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
