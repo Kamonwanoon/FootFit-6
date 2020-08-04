@@ -6,154 +6,132 @@
     android:layout_height="match_parent"
     android:background="#E9E7E3"
     tools:context="com.example.footfit.MainActivity">
-
     <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="413dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="515dp"
-        android:background="#A39165"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
+        android:weightSum="3">
         <TextView
-            android:id="@+id/listofimage"
+            android:padding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:fontFamily="sans-serif-medium"
-            android:paddingTop="57dp"
-            android:text="@string/select_the_side_of_your_foot"
-            android:textAlignment="center"
+            android:layout_height="0dp"
+            android:background="#A39165"
             android:textColor="#FFFFFF"
+            android:layout_weight="0.6"
             android:textSize="30sp"
-            android:textStyle="italic" />
+            android:gravity="center"
+            android:text="@string/select_the_side_of_your_foot"/>
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:weightSum="3">
+            <LinearLayout
+                android:showDividers="middle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+                <ImageButton
+                    android:id="@+id/buttonls"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:background="@drawable/transparent_box"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/l_sole"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageButton
+                    android:id="@+id/buttonrs"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:background="@drawable/transparent_box"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/r_sole"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+            <LinearLayout
+                android:showDividers="middle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+                <ImageButton
+                    android:id="@+id/buttonlm"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_box"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/l_medial"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageButton
+                    android:id="@+id/buttonrm"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_box"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/r_medial"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+            <LinearLayout
+                android:showDividers="middle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+                <ImageButton
+                    android:id="@+id/buttonll"
+                    android:background="@drawable/transparent_box"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/l_lateral"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageButton
+                    android:id="@+id/buttonrl"
+                    android:background="@drawable/transparent_box"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/r_lateral"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:gravity="right|center">
+            <Button
+                android:layout_marginRight="40.7dp"
+                android:id="@+id/GTcheckimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#C7C0A7"
+                android:text="@string/next"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/buttonls"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginBottom="407dp"
-        android:background="@drawable/l_sole"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:srcCompat="@drawable/l_sole"
-        tools:ignore="MissingConstraints" />
 
 
 
-    <ImageButton
-        android:id="@+id/buttonrs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="407dp"
-        android:background="@drawable/r_sole"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonls"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:srcCompat="@drawable/r_sole"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/buttonlm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginBottom="245dp"
-        android:background="@drawable/l_medial"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonls"
-        app:srcCompat="@drawable/l_medial"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/buttonrm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="244dp"
-        android:background="@drawable/r_medial"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonlm"
-        app:layout_constraintTop_toBottomOf="@+id/buttonrs"
-        app:srcCompat="@drawable/r_medial"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/buttonll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginBottom="89dp"
-        android:background="@drawable/l_lateral"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonlm"
-        app:srcCompat="@drawable/l_lateral"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/buttonrl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="87dp"
-        android:background="@drawable/r_lateral"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonll"
-        app:layout_constraintTop_toBottomOf="@+id/buttonrm"
-        app:srcCompat="@drawable/r_lateral"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/GTcheckimage"
-        android:layout_width="112dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginBottom="30dp"
-        android:background="#C7C0A7"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonrl"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

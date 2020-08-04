@@ -1,75 +1,64 @@
 package com.example.footfit
 
 import android.content.Intent
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import com.blogspot.atifsoftwares.takepicture_kotlin.R
+import com.example.footfit.model.ImagesModel
 import kotlinx.android.synthetic.main.option.*
 
 class option : AppCompatActivity() {
+    private var imageList: ArrayList<ImagesModel> = ArrayList()
+    private  lateinit var name: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.option)
+        setOnclick()
+    }
 
-        val next = findViewById<Button>(R.id.GTcheckimage)
-        next.setOnClickListener {
+    private fun setOnclick(){
+        buttonls.setOnClickListener{
+            name = "leftSole"
+            dispatchTakePictureIntent()
+        }
+        buttonrs.setOnClickListener{
+            name = "rightSole"
+            dispatchTakePictureIntent()
+        }
+        buttonlm.setOnClickListener{
+            name = "leftM"
+            dispatchTakePictureIntent()
+        }
+        buttonrm.setOnClickListener{
+            name = "rightM"
+            dispatchTakePictureIntent()
+        }
+        GTcheckimage.setOnClickListener {
+            checkimage.getLaunchIntent(this, imageList)
             val intent = Intent(this,checkimage::class.java)
             startActivity(intent)
         }
-        buttonls.setOnClickListener{
-            var i = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(i,120)
+    }
+    private val REQUEST_IMAGE_CAPTURE = 1
+    //connect to device camera
+    private fun dispatchTakePictureIntent() {
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+            takePictureIntent.resolveActivity(this.packageManager).also {
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+            }
         }
-        buttonrs.setOnClickListener{
-            var j = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(j,121)
-        }
-        buttonlm.setOnClickListener{
-            var i = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(i,122)
-        }
-        buttonrm.setOnClickListener{
-            var j = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(j,123)
-        }
-        buttonll.setOnClickListener{
-            var i = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(i,124)
-        }
-        buttonrl.setOnClickListener{
-            var j = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(j,125)
+    }
+    //get picture after took a picture
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            val imageBitmap = data?.extras?.get("data") as Bitmap
+            imageList.add(ImagesModel(name, imageBitmap))
         }
     }
 
-//     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//         super.onActivityResult(requestCode, resultCode, data)
-//         if(requestCode==120) {
-//            var bmp = data?.extras?.get("data") as Bitmap
-//            buttonls.setImageBitmap(bmp)
-//        }
-//         else if (requestCode==121){
-//             var bmp1 = data?.extras?.get("data") as Bitmap
-//             buttonrs.setImageBitmap(bmp1)
-//         }
-//         else if (requestCode==122){
-//             var bmp2 = data?.extras?.get("data") as Bitmap
-//             buttonlm.setImageBitmap(bmp2)
-//         }
-//         else if (requestCode==123){
-//             var bmp3 = data?.extras?.get("data") as Bitmap
-//             buttonrm.setImageBitmap(bmp3)
-//         }
-//         else if (requestCode==124){
-//             var bmp4 = data?.extras?.get("data") as Bitmap
-//             buttonll.setImageBitmap(bmp4)
-//         }
-//         else if (requestCode==125){
-//             var bmp5 = data?.extras?.get("data") as Bitmap
-//             buttonrl.setImageBitmap(bmp5)
-//         }
-//    }
 
 }
