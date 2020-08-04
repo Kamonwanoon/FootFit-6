@@ -11,16 +11,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="3">
+
         <TextView
-            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="#A39165"
-            android:textColor="#FFFFFF"
             android:layout_weight="0.6"
-            android:textSize="30sp"
+            android:background="#A39165"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="@string/select_the_side_of_your_foot"/>
+            android:padding="20dp"
+            android:text="@string/select_the_side_of_your_foot"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="italic" />
         <LinearLayout
             android:padding="20dp"
             android:layout_width="match_parent"
@@ -28,110 +31,86 @@
             android:orientation="vertical"
             android:layout_weight="2"
             android:weightSum="3">
-            <LinearLayout
-                android:showDividers="middle"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:weightSum="2">
-                <ImageButton
-                    android:id="@+id/buttonls"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:background="@drawable/transparent_box"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/l_sole"
-                    tools:ignore="MissingConstraints" />
 
-                <ImageButton
-                    android:id="@+id/buttonrs"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:background="@drawable/transparent_box"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/r_sole"
-                    tools:ignore="MissingConstraints" />
-            </LinearLayout>
-            <LinearLayout
-                android:showDividers="middle"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:weightSum="2">
-                <ImageButton
-                    android:id="@+id/buttonlm"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/transparent_box"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/l_medial"
-                    tools:ignore="MissingConstraints" />
 
-                <ImageButton
-                    android:id="@+id/buttonrm"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/transparent_box"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/r_medial"
-                    tools:ignore="MissingConstraints" />
-            </LinearLayout>
             <LinearLayout
-                android:showDividers="middle"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:weightSum="2">
-                <ImageButton
-                    android:id="@+id/buttonll"
-                    android:background="@drawable/transparent_box"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/l_lateral"
-                    tools:ignore="MissingConstraints" />
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/buttonrl"
-                    android:background="@drawable/transparent_box"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/todo"
-                    app:srcCompat="@drawable/r_lateral"
-                    tools:ignore="MissingConstraints" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/mySpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:layout_weight="1"
+                        tools:ignore="MissingConstraints"
+                        android:layout_gravity="center"/>
+
+                    <Spinner
+                        android:id="@+id/mySpinner2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        tools:ignore="MissingConstraints"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/footView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.4"
-            android:gravity="right|center">
-            <Button
-                android:layout_marginRight="40.7dp"
-                android:id="@+id/GTcheckimage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#C7C0A7"
-                android:text="@string/next"
-                tools:ignore="MissingConstraints" />
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/retake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#C7C0A7"
+                    android:text= "take"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/GTcheckimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#C7C0A7"
+                    android:text= "@string/next"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
