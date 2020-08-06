@@ -4,7 +4,7 @@
     <!-- Adding Camera, Write External Storage Permission -->
     <uses-feature
         android:name="android.hardware.Camera"
-        android:required="true"/>
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -13,49 +13,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="com.example.footfit.option"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name="com.example.footfit.preview"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name="com.example.footfit.checkimage"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.marks"
-        android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.result"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.markguide"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.markguideside"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.markguidesidelateral"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.marksidelateral"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.markside"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.guideline"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name="com.example.footfit.MainActivity"
+        <activity android:name="com.example.footfit.Maker"></activity>
+        <activity
+            android:name="com.example.footfit.option"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.preview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.checkimage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.marks"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.result"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.markguide"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.markguideside"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.markguidesidelateral"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.marksidelateral"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.markside"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.guideline"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.footfit.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

@@ -23,6 +23,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.75"/>
         <Button
+            android:id="@+id/mark_button"
             android:layout_margin="5dp"
             android:layout_weight="0.5"
             android:layout_width="0dp"
