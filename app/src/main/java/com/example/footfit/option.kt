@@ -24,7 +24,9 @@ class option : AppCompatActivity() {
     lateinit var rest2: TextView
 
     private var imageList: ArrayList<ImagesModel> = ArrayList()
-    private  lateinit var name: String
+    private lateinit var name: String
+    private var flashFlag: Boolean = false
+
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +34,13 @@ class option : AppCompatActivity() {
         setOnclick()
         footComponentsChoice = mySpinner
         flashChoice = mySpinner2
-        var opts = arrayOf("Left Sole", "Right Sole","Left Medial","Right Medial")
+        var opts = arrayOf("Left Sole", "Right Sole", "Left Medial", "Right Medial")
         var opts2 = arrayOf("Flash", "Not Flash")
-        footComponentsChoice.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,opts)
-        flashChoice.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,opts2)
+        footComponentsChoice.adapter =
+            ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, opts)
+        flashChoice.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, opts2)
 
-        footComponentsChoice.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        footComponentsChoice.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 rest.text = "Please select part of foot"
             }
@@ -53,7 +56,7 @@ class option : AppCompatActivity() {
         }
 
 
-        flashChoice.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        flashChoice.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 rest2.text = "Type of image"
             }
@@ -64,36 +67,40 @@ class option : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
+                flashFlag = flashChoice.selectedItem.toString() != "Not Flash"
                 showImage()
             }
         }
     }
 
-    private fun showImage(){
-        var name: String = footComponentsChoice.selectedItem.toString() + "_" +flashChoice.selectedItem.toString()
-        var list: List<ImagesModel> = imageList.filter { imagesModel -> imagesModel.getName() == name  }
-        if(list.isNotEmpty()){
+    private fun showImage() {
+        var name: String = footComponentsChoice.selectedItem.toString()
+        var list: List<ImagesModel> =
+            imageList.filter { imagesModel -> imagesModel.getName() == name && imagesModel.getFlash() == flashFlag}
+        if (list.isNotEmpty()) {
             footView.setImageBitmap(list[0].getImage())
             retake.text = "retake"
-        }
-        else{
+        } else {
             footView.setImageDrawable(this.getDrawable(R.drawable.box1))
             retake.text = "take"
         }
 
     }
-    private fun setOnclick(){
-        retake.setOnClickListener{
+
+    private fun setOnclick() {
+        retake.setOnClickListener {
 
             dispatchTakePictureIntent()
         }
         GTcheckimage.setOnClickListener {
             checkimage.getLaunchIntent(this, imageList)
-            val intent = Intent(this,checkimage::class.java)
+            val intent = Intent(this, checkimage::class.java)
             startActivity(intent)
         }
     }
+
     private val REQUEST_IMAGE_CAPTURE = 1
+
     //connect to device camera
     private fun dispatchTakePictureIntent() {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
@@ -102,17 +109,19 @@ class option : AppCompatActivity() {
             }
         }
     }
+
     //get picture after took a picture
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
-            var name: String = footComponentsChoice.selectedItem.toString() + "_" + flashChoice.selectedItem.toString()
-            val condition: Predicate<ImagesModel> =
-                Predicate { image -> image.getName() == name }
-            imageList.removeIf(condition)
-            imageList.add(ImagesModel(name, imageBitmap))
+            var name: String = footComponentsChoice.selectedItem.toString()
+            flashFlag = flashChoice.selectedItem.toString() != "Not Flash"
 
+            val condition: Predicate<ImagesModel> =
+                Predicate { image -> image.getName() == name && image.getFlash() == flashFlag}
+            imageList.removeIf(condition)
+            imageList.add(ImagesModel(name, imageBitmap, flashFlag))
             showImage()
         }
     }
