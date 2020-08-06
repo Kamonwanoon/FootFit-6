@@ -2,23 +2,31 @@ package com.example.footfit.model
 
 import android.graphics.Bitmap
 
-class ImagesModel(name: String, image: Bitmap?) {
+class ImagesModel(name: String, image: Bitmap?, flash: Boolean) {
     private var name: String = name
     private var image: Bitmap? = image
+    private var flash: Boolean = flash
 
-    public fun getName(): String {
+    fun getFlash(): Boolean{
+        return flash
+    }
+    fun setFlash(flash: Boolean){
+        this.flash = flash
+    }
+
+    fun getName(): String {
         return name
     }
 
-    public fun setName(name: String) {
+    fun setName(name: String) {
         this.name = name
     }
 
-    public fun getImage(): Bitmap? {
+    fun getImage(): Bitmap? {
         return image
     }
 
-    public fun setImage(image: Bitmap) {
+    fun setImage(image: Bitmap) {
         this.image = image
     }
 

@@ -25,7 +25,7 @@ class checkimage : AppCompatActivity() {
         setRecycleView()
     }
     private fun setRecycleView(){
-        var imageAdapter = RecycleAdapter(images)
+        var imageAdapter = RecycleAdapter(ArrayList(images.filter { image -> image.getFlash() }))
         recycle_view.apply {
             layoutManager = GridLayoutManager(context, 1, GridLayoutManager.VERTICAL, false)
             isNestedScrollingEnabled = false
